@@ -26,6 +26,7 @@ addParameters({
     }),
     sidebarAnimations: false,
     panelPosition: 'right',
+    sortStoriesByKind: false,
   },
   viewport: { defaultViewport: 'iphone6' },
 });
@@ -33,6 +34,7 @@ addParameters({
 const contexts = [
   require.context('../../packages', true, /stories.*\.jsx?$/),
   require.context('../../templates', true, /stories.*\.jsx?$/),
+  require.context('../../utilities', true, /stories.*\.jsx?$/),
 ];
 
 configure(() => {

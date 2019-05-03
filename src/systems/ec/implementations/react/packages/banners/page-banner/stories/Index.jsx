@@ -3,15 +3,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import demoContentImage from '@ecl/ec-specs-hero-banner/demo/data--image';
-import demoContentImageShade from '@ecl/ec-specs-hero-banner/demo/data--image-shade';
-import demoContentPrimary from '@ecl/ec-specs-hero-banner/demo/data--primary';
-import demoContentDefault from '@ecl/ec-specs-hero-banner/demo/data--default';
-import demoContentAlignLeft from '@ecl/ec-specs-hero-banner/demo/data--align-left';
+import demoContentImage from '@ecl/ec-specs-page-banner/demo/data--image';
+import demoContentImageShade from '@ecl/ec-specs-page-banner/demo/data--image-shade';
+import demoContentPrimary from '@ecl/ec-specs-page-banner/demo/data--primary';
+import demoContentDefault from '@ecl/ec-specs-page-banner/demo/data--default';
+import demoContentAlignLeft from '@ecl/ec-specs-page-banner/demo/data--align-left';
 
-import HeroBanner from '../src/HeroBanner';
+import PageBanner from '../src/PageBanner';
 
-storiesOf('Banners/Hero Banner', module)
+storiesOf('Components|Banners/Page Banner', module)
   .addDecorator(withKnobs)
   .add('image', () => {
     const button = {
@@ -20,10 +20,10 @@ storiesOf('Banners/Hero Banner', module)
     };
 
     return (
-      <HeroBanner
+      <PageBanner
         variant="image"
         title={text('Title', demoContentImage.title)}
-        description={text('Description', demoContentImage.description)}
+        baseline={text('Baseline', demoContentImage.baseline)}
         button={button}
         isCentered={boolean('Centered', true)}
         image={text('Image', demoContentImage.image)}
@@ -37,10 +37,10 @@ storiesOf('Banners/Hero Banner', module)
     };
 
     return (
-      <HeroBanner
+      <PageBanner
         variant="image-shade"
         title={text('Title', demoContentImageShade.title)}
-        description={text('Description', demoContentImageShade.description)}
+        baseline={text('Baseline', demoContentImageShade.baseline)}
         button={button}
         isCentered={boolean('Centered', true)}
         image={text('Image', demoContentImageShade.image)}
@@ -54,10 +54,10 @@ storiesOf('Banners/Hero Banner', module)
     };
 
     return (
-      <HeroBanner
+      <PageBanner
         variant="primary"
         title={text('Title', demoContentPrimary.title)}
-        description={text('Description', demoContentPrimary.description)}
+        baseline={text('Baseline', demoContentPrimary.baseline)}
         button={button}
         isCentered={boolean('Centered', true)}
       />
@@ -70,10 +70,10 @@ storiesOf('Banners/Hero Banner', module)
     };
 
     return (
-      <HeroBanner
+      <PageBanner
         variant="default"
         title={text('Title', demoContentDefault.title)}
-        description={text('Description', demoContentDefault.description)}
+        baseline={text('Baseline', demoContentDefault.baseline)}
         button={button}
         isCentered={boolean('Centered', true)}
       />
@@ -86,10 +86,10 @@ storiesOf('Banners/Hero Banner', module)
     };
 
     return (
-      <HeroBanner
+      <PageBanner
         variant="default"
         title={text('Title', demoContentAlignLeft.title)}
-        description={text('Description', demoContentAlignLeft.description)}
+        baseline={text('Baseline', demoContentAlignLeft.baseline)}
         button={button}
         isCentered={false}
       />

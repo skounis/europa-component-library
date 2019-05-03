@@ -26,6 +26,7 @@ addParameters({
     }),
     sidebarAnimations: false,
     panelPosition: 'right',
+    sortStoriesByKind: true,
   },
   viewport: { defaultViewport: 'iphone6' },
 });
